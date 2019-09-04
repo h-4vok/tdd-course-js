@@ -27,9 +27,12 @@ describe('BracketValidator', () => {
     });
   };
 
+  const runTestIsBalancedBrackets = (cases, expectedOutput) =>
+    cases.forEach(input => testIsBalancedBrackets(input, expectedOutput));
+
   const successCases = [null, '', '()', '{(())}'];
   const failedCases = ['(', '()(){', '(('];
 
-  failedCases.forEach(input => testIsBalancedBrackets(input, false));
-  successCases.forEach(input => testIsBalancedBrackets(input, true));
+  runTestIsBalancedBrackets(failedCases, false);
+  runTestIsBalancedBrackets(successCases, true);
 });
