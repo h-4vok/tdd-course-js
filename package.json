@@ -2,7 +2,6 @@
   "name": "tdd-course-js",
   "version": "1.0.0",
   "scripts": {
-    "prepublish": "npm run all-checks && npm run code-coverage && npm run build",
     "build": "npx babel src --out-dir dist",
     "copy-package-json": "cp package.json dist",
     "watch": "npx babel src --watch --out-dir dist",
